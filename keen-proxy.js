@@ -8,7 +8,7 @@ var config = {
   keen_server: process.env.KEEN_SERVER || "http://api.keen.io",
 
   // List of domains that will be "allowed" (if the browser respect CORS) to query this proxy
-  allowedDomains: JSON.parse(process.env.ALLOWED_DOMAINS),
+  allowedDomains: JSON.parse(process.env.ALLOWED_DOMAINS || '""'),
 
   // Your Keen.io master key
   masterKey: process.env.KEEN_MASTER_KEY,
